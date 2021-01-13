@@ -46,15 +46,21 @@ class App extends Component {
             return (
               <div key={index} className="rounded-md border p-3 my-4 hover:shadow-md hover:border-blue-900 bg-white">
 
-                <header className="flex">
-                  <h1>
+                <header className="flex justify-between items-center">
+                  <div className="flex">
+                  <h1 className="font-meduim">
                     <span className="font-bold">Sender:</span> {sender}
                   </h1>
                   <span className="mx-2 font-bold">
                     To
                    </span>
-                  <h2>
+                  <h2 className="font-meduim">
                     {reciever}
+                  </h2>
+                  </div>
+
+                  <h2 className="text-blue-900">
+                    Time: {m.split(" ")[0]}
                   </h2>
                 </header>
 
