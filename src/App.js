@@ -40,7 +40,6 @@ class App extends Component {
         {this.state.messages.map((m, index) => {
           if (m.split('to')[1] !== undefined)
           {
-            const indexOfTo = m.indexOf('to');
             const sender = (m.split('to')[0]).split('From')[1];
             const reciever = (m.split('to')[1]).split(':')[0]
 
@@ -68,6 +67,8 @@ class App extends Component {
               </div>
             );
           }
+
+          return null;
 
         })}
       </div>
