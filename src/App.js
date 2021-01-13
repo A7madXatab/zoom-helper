@@ -37,7 +37,7 @@ class App extends Component {
       <div className="w-full md:w-8/12 pt-2">
         {/* <button onClick={this.focusInput} className="transition duration-200 ease-in px-3 py-1 border border-blue-900 rounded-md hover:bg-blue-900 hover:text-white">Choose File</button> */}
         <input id="file" type="file" onChange={(e) => this.showFile(e)} />
-        {this.state.messages.map(m => {
+        {this.state.messages.map((m, index) => {
           if (m.split('to')[1] !== undefined)
           {
             const indexOfTo = m.indexOf('to');
@@ -45,7 +45,7 @@ class App extends Component {
             const reciever = (m.split('to')[1]).split(':')[0]
 
             return (
-              <div className="rounded-md border p-3 my-4 hover:shadow-md hover:border-blue-900 bg-white">
+              <div key={index} className="rounded-md border p-3 my-4 hover:shadow-md hover:border-blue-900 bg-white">
 
                 <header className="flex">
                   <h1>
